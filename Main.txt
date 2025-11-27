@@ -555,41 +555,8 @@ function OrionLib:MakeWindow(WindowConfig)
 		}),
 	}), "Second")
 
-local ranks = {
-["| Programmer |"] = {"Wojtes_BMW", "SanderDevALT"},
-    ["| Sponsor |"] = {"bytesiege"},
-    ["| Support |"] = {"seb_xdb0", "AntekWoszszczczek", "Madhya78"},
-    ["| Member |"] = {}
-}
-
-function getRank(player)
-    local name = typeof(player) == "string" and player or player.Name
-    for rank, users in pairs(ranks) do
-        for _, val in pairs(users) do
-            if val == name then
-                return rank
-            end
-        end
-    end
-    return "Member"
-end
-
-local rankData = {
-    ["| Programmer |"] = {color = "rgb(0, 150, 255)", icon = ""}, -- Azul ciano
-    ["| Sponsor |"] = {color = "rgb(0, 150, 255)", icon = ""}, -- Azul ciano
-    ["| Support |"] = {color = "rgb(0, 150, 255)", icon = ""}, -- Azul ciano
-    ["| Member |"] = {color = "rgb(0, 150, 255)", icon = ""} -- Azul ciano
-}
-
-local player = game.Players.LocalPlayer
-local rank = getRank(player)
-local data = rankData[rank] or {color = "rgb(0, 150, 255)", icon = ""} -- Azul ciano
-
-local fullText = "<font color='rgb(0, 150, 255)'>Sander</font> " .. -- Azul ciano
-                 "<font color='rgb(240, 240, 240)'>XY「 BrookHaven 」 • </font>" .. -- Branco bem claro
-                 "<font color='rgb(0, 150, 255)'>BACK TO SCHOOL</font> " .. -- Azul ciano
-                 "<font color='rgb(240, 240, 240)'> • </font>" .. -- Branco bem claro
-                 string.format("<font color='%s'>%s %s </font>", data.color, data.icon, rank)
+-- Texto modificado: apenas "Lyra V3"
+local fullText = "<font color='rgb(0, 150, 255)'>Lyra V3</font>"
 			
 local WindowName = SetProps(MakeElement("Label", WindowConfig.Name, 14), {
     Size = UDim2.new(1, -30, 2, 0),
@@ -600,7 +567,6 @@ local WindowName = SetProps(MakeElement("Label", WindowConfig.Name, 14), {
     RichText = true,
     Text = fullText
 })
-
 
 	local WindowTopBarLine = AddThemeObject(SetProps(MakeElement("Frame"), {
 		Size = UDim2.new(1, 0, 0, 1),
