@@ -509,7 +509,6 @@ function OrionLib:MakeWindow(WindowConfig)
 		Size = UDim2.new(1, 0, 0, 50)
 	})
 
-	-- Adicionar imagem do perfil do jogador
 	local PlayerThumbnail = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. LocalPlayer.UserId .. "&width=420&height=420&format=png"
 	
 	local WindowStuff = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(10, 10, 10), 0, 10), {
@@ -562,8 +561,6 @@ function OrionLib:MakeWindow(WindowConfig)
 		}),
 	}), "Second")
 
-local fullText = "<font color='rgb(0, 150, 255)'>Lyra Hub V3</font>"
-			
 local WindowName = SetProps(MakeElement("Label", WindowConfig.Name, 14), {
     Size = UDim2.new(1, -30, 2, 0),
     Position = UDim2.new(0, 25, 0, -24),
@@ -571,7 +568,7 @@ local WindowName = SetProps(MakeElement("Label", WindowConfig.Name, 14), {
     TextSize = 20,
     TextColor3 = Color3.fromRGB(240, 240, 240),
     RichText = true,
-    Text = fullText
+    Text = "<font color='rgb(0, 150, 255)'><stroke color='rgb(255, 255, 255)' transparency='0.3'>Lyra Hub V3</stroke></font>"
 })
 
 	local WindowTopBarLine = AddThemeObject(SetProps(MakeElement("Frame"), {
